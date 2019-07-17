@@ -92,7 +92,7 @@ var breakCyclesInBFS = function(object, customizer) {
         if(customizer !== undefined) {
 
             //By using this variable, customizer(value) is called only once.
-            var customizedValue = customizer(value);
+            var customizedValue = customizer(value, path);
 
             if(customizedValue !== undefined) value = customizedValue;
         }
